@@ -12,9 +12,7 @@ export default class RoomProvider extends Component {
   }
 
   componentDidMount() {
-    console.log('mounted')
     let rooms = this.formatData(items)
-    console.log(rooms)
 
     let featuredRooms = rooms.filter(room => room.featured === true)
     this.setState({
