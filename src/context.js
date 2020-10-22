@@ -13,7 +13,7 @@ class RoomProvider extends Component {
 
   conmponentDidMount() {
     let rooms = this.formatData(items)
-    let featuredRooms = rooms.filter(room => room.feature === true)
+    let featuredRooms = rooms.filter(room => room.featured === true)
     this.setState({
       rooms,
       featuredRooms,

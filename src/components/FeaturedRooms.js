@@ -5,7 +5,7 @@ class FeaturedRooms extends Component {
 static contextType = RoomContext
 
   render () {
-    const value = this.context
+    const {featuredRooms : rooms} = this.context
     
     return (
       <div>FEATURED ROOMS</div>
