@@ -4,7 +4,7 @@ import loadingGif from '../images/gif/loading-arrow.gif'
 function Loading () {
   return (
     <div classsName='loading'>
-      <h4>Loading...</h4>
+      <h4>Informations will be shortly displayed...</h4>
       <img src={loadingGif} alt='' />
     </div>
   )

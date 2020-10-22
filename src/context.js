@@ -3,7 +3,7 @@ import items from './data'
 
 const RoomContext = React.createContext()
 
-class RoomProvider extends Component {
+export default class RoomProvider extends Component {
   state = {
     rooms: [],
     sortedRooms: [],
@@ -11,8 +11,11 @@ class RoomProvider extends Component {
     loading: true
   }
 
-  conmponentDidMount() {
+  componentDidMount() {
+    console.log('mounted')
     let rooms = this.formatData(items)
+    console.log(rooms)
+
     let featuredRooms = rooms.filter(room => room.featured === true)
     this.setState({
       rooms,
