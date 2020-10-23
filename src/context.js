@@ -33,6 +33,12 @@ export default class RoomProvider extends Component {
     return tempItems
   }
 
+  getRoom = slug => {
+    let tempRoom = [...this.state.room]
+    const room = tempRoom.find(room => room.slug === slug)
+    return room
+  }
+
   render() {
     return (
       <RoomContext.Provider value ={{...this.state}}>
