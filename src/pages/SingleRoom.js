@@ -29,10 +29,18 @@ class SingleRoom extends Component {
           </Link> 
         </div>
       )
-    } else return (
-      <div>
-        SINGLE ROOM {room.name}
-      </div>
+    }
+    
+    const {name, desription, capacity, price, size, extras, breakfast, pets, images} = room
+
+    return (
+      <Hero hero='roomsHero'>
+        <Banner title={`${name} room`}>
+          <Link to='/rooms' className='btn-primary'>
+            Back to rooms
+          </Link>
+        </Banner>  
+      </Hero>
     )
   }
 }
