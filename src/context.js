@@ -8,13 +8,22 @@ export default class RoomProvider extends Component {
     rooms: [],
     sortedRooms: [],
     feturedRooms: [],
-    loading: true
+    loading: true,
+    type: 'all',
+    capacity: 1,
+    price: 0,
+    minPrice: 0,
+    maxPrice: 0,
+    minSize: 0,
+    maxSize: 0,
+    breakfast: false,
+    pets: false
   }
 
   componentDidMount() {
     let rooms = this.formatData(items)
-
     let featuredRooms = rooms.filter(room => room.featured === true)
+
     this.setState({
       rooms,
       featuredRooms,
