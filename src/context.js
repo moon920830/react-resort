@@ -59,6 +59,10 @@ export default class RoomProvider extends Component {
     const value = event.target.value
   }
 
+  filterRooms = () => {
+    console.log('temporary hello :p')
+  }
+
   render() {
     return (
       <RoomContext.Provider value ={{ ...this.state, getRoom: this.getRoom }}>
