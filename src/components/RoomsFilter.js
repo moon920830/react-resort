@@ -1,5 +1,4 @@
-import React from 'react'
-import {useContext} from 'react'
+import React, {useContext} from 'react'
 import {RoomContext} from '../context'
 import Title from '../components/Title'
 
@@ -14,8 +13,8 @@ function RoomsFilter ({rooms}) {
     handleChange, type, capacity, price, minPrice, maxPrice, minsize, maxSize, breakfeast, pets
   } = context
 
-  /*get unique types, add 'all', return JSX options */
-  let types = getUnique(rooms,'type')
+  /* get unique types, add 'all', return JSX options */
+  let types = getUnique(rooms, 'type')
   types = ['all', ...types]
   types = types.map((item, index) => {
     return <option value={item} key={index}>{item}</option>
@@ -23,8 +22,8 @@ function RoomsFilter ({rooms}) {
 
   return (
     <section className='filter-container'>
-      <Title title='search rooms'/>
-      <form className="filter-form">
+      <Title title='search rooms' />
+      <form className='filter-form'>
         <div className='form-group'>
           <label htmlFor='type'>
             room type
