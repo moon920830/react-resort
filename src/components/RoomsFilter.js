@@ -10,7 +10,7 @@ const getUnique = (items, value) => {
 function RoomsFilter ({rooms}) {
   const context = useContext(RoomContext)
   const {
-    handleChange, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfeast, pets
+    handleChange, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfast, pets
   } = context
 
   /* get room unique types, add 'all', return JSX options */
@@ -89,6 +89,14 @@ function RoomsFilter ({rooms}) {
           </div>
         </div>
         {/* end size */}
+        {/* extras */}
+        <div className='form-group'>
+          <div className='single-extra'>
+            <input type='checkbox' name='breakfast' id='brekafast' checked={breakfast} onchnge={handleChange} />
+            <label htmlFor='breakfast'>breakfast</label>
+          </div>
+        </div>
+        {/* end extras */}
       </form>
     </section>
   )
