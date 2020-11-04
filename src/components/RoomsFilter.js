@@ -95,6 +95,10 @@ function RoomsFilter ({rooms}) {
             <input type='checkbox' name='breakfast' id='brekafast' checked={breakfast} onchnge={handleChange} />
             <label htmlFor='breakfast'>breakfast</label>
           </div>
+          <div className='single-extra'>
+            <input type='checkbox' name='pets' id='pets' checked={pets} onchnge={handleChange} />
+            <label htmlFor='pets'>pets</label>
+          </div>
         </div>
         {/* end extras */}
       </form>
