@@ -10,7 +10,7 @@ const getUnique = (items, value) => {
 function RoomsFilter ({rooms}) {
   const context = useContext(RoomContext)
   const {
-    handleChange, type, capacity, price, minPrice, maxPrice, minsize, maxSize, breakfeast, pets
+    handleChange, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfeast, pets
   } = context
 
   /* get room unique types, add 'all', return JSX options */
@@ -78,6 +78,17 @@ function RoomsFilter ({rooms}) {
           />
         </div>
         {/* end room price */}
+        {/* size */}
+        <div className='form-group'>
+          <label htmlFor='size'>
+            room size
+          </label>
+          <div className='size-inputs'>
+            <input type='number' name='minSize' id='size' value={minSize} onChange={handleChange} className='size-input' />
+            <input type='number' name='maxSize' id='size' value={maxSize} onChange={handleChange} className='size-input' />
+          </div>
+        </div>
+        {/* end size */}
       </form>
     </section>
   )
